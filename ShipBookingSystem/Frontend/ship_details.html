@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage Details — AuraCruises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="ship-details">
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path d="M2 21h20M19.3 12H4.7c-.5 0-.9-.3-1-.8L2.1 6.1C2 5.5 2.4 5 3 5h18c.6 0 1 .5.9 1.1l-1.6 5.1c-.1.5-.5.8-1 .8zM12 2v3M8 3v2M16 3v2" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="logo-text">AuraCruises</span>
+            </a>
+            <nav>
+                <ul class="nav-menu" id="nav-menu"></ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="details-grid">
+            
+            <!-- Left Info Column -->
+            <div>
+                <span class="badge-status status-confirmed" id="ship-name-badge" style="margin-bottom: 0.75rem;">Loading Ship...</span>
+                <h1 class="section-title" id="ship-route" style="font-size: 2.75rem; line-height: 1.2; margin-bottom: 0.5rem;">Route Details</h1>
+                <p class="section-subtitle" id="journey-info" style="margin-bottom: 2rem;">Voyage Timings</p>
+                
+                <!-- Gallery Carousel Mock -->
+                <div class="gallery-carousel">
+                    <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=1200&auto=format&fit=crop" alt="Premium Cruise Vessel">
+                </div>
+
+                <!-- Cabins Selector -->
+                <div class="cabin-section">
+                    <h2 class="section-title" style="font-size: 1.65rem;">Select Cabin Class</h2>
+                    <p class="section-subtitle">Fares differ based on lodging capacity and premium suite privileges.</p>
+                    
+                    <div class="cabin-grid" id="cabins-grid">
+                        <!-- Loaded via script.js -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Summary Column -->
+            <div>
+                <div class="summary-card">
+                    <h2 class="summary-title">Journey Summary</h2>
+                    
+                    <div class="summary-row">
+                        <span style="color: var(--text-slate);">Vessel</span>
+                        <strong id="summary-ship">-</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span style="color: var(--text-slate);">Itinerary</span>
+                        <strong id="summary-route">-</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span style="color: var(--text-slate);">Date</span>
+                        <strong id="summary-date">-</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span style="color: var(--text-slate);">Cabin Class</span>
+                        <strong id="summary-cabin">-</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span style="color: var(--text-slate);">Base Price</span>
+                        <span id="base-fare-span">$0</span>
+                    </div>
+                    
+                    <div class="summary-row total">
+                        <span>Total Fare</span>
+                        <span id="summary-total">$0</span>
+                    </div>
+
+                    <button class="btn-submit" id="btn-book-now" style="width: 100%; margin-top: 1.5rem; height: 3.5rem;">
+                        Book Cabin Now
+                    </button>
+                    <p style="text-align: center; font-size: 0.85rem; color: var(--text-slate); margin-top: 1rem;">
+                        🔒 Secure transaction checkouts powered by AuraPay.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 AuraCruises. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

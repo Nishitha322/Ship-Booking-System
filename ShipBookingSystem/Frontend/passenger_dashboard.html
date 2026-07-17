@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Dashboard — AuraCruises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="passenger-dashboard">
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path d="M2 21h20M19.3 12H4.7c-.5 0-.9-.3-1-.8L2.1 6.1C2 5.5 2.4 5 3 5h18c.6 0 1 .5.9 1.1l-1.6 5.1c-.1.5-.5.8-1 .8zM12 2v3M8 3v2M16 3v2" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="logo-text">AuraCruises</span>
+            </a>
+            <nav>
+                <ul class="nav-menu" id="nav-menu"></ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar" aria-label="Dashboard Sidebar">
+            <h2 class="sidebar-title">Passenger Portal</h2>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="sidebar-link active">📊 Dashboard Summary</a></li>
+                <li><a href="booking_history.html" class="sidebar-link">🚢 My Voyage Bookings</a></li>
+                <li><a href="ships.html" class="sidebar-link">🔍 Book New Voyage</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Dashboard View -->
+        <main class="dashboard-main">
+            <div style="background-color: var(--white); padding: 2.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: space-between; margin-bottom: 3rem;">
+                <div>
+                    <h1 class="section-title" id="user-full-name" style="margin-bottom: 0.25rem;">Passenger Name</h1>
+                    <p class="section-subtitle" id="user-meta-info">Nationality | Passport Number</p>
+                </div>
+                <div style="font-size: 3rem;">⚓</div>
+            </div>
+
+            <!-- Metrics Cards Grid -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-label">Total Bookings</span>
+                    <div class="metric-val" id="metric-total">0</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Confirmed Trips</span>
+                    <div class="metric-val" id="metric-upcoming">0</div>
+                </div>
+                <div class="metric-card coral">
+                    <span class="metric-label">Waiting Lists</span>
+                    <div class="metric-val" id="metric-waiting">0</div>
+                </div>
+            </div>
+
+            <!-- Payments Transaction History -->
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-navy);">Payments Ledger Log</h2>
+            <div class="table-wrapper">
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Payment ID</th>
+                            <th>Reference Booking</th>
+                            <th>Amount Paid</th>
+                            <th>Payment Method</th>
+                            <th>Transaction Code</th>
+                            <th>Verification Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="passenger-payments-tbody">
+                        <!-- Loaded dynamically via script.js -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        
+    </div>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 AuraCruises. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

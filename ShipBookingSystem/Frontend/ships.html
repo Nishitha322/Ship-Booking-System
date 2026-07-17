@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedules & Voyages — AuraCruises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="ships">
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path d="M2 21h20M19.3 12H4.7c-.5 0-.9-.3-1-.8L2.1 6.1C2 5.5 2.4 5 3 5h18c.6 0 1 .5.9 1.1l-1.6 5.1c-.1.5-.5.8-1 .8zM12 2v3M8 3v2M16 3v2" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="logo-text">AuraCruises</span>
+            </a>
+            <nav>
+                <ul class="nav-menu" id="nav-menu"></ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="section-header">
+            <div class="section-title-wrapper">
+                <h1 class="section-title">Voyage Schedules</h1>
+                <p class="section-subtitle">Browse and filter active ship departures, timelines, and ticket fares.</p>
+            </div>
+        </div>
+
+        <!-- Inline Filters -->
+        <div class="search-card" style="margin-bottom: 3rem; padding: 1.75rem;">
+            <form class="search-form" id="filter-form">
+                <div class="form-group">
+                    <label for="filter-source">From Port</label>
+                    <input type="text" id="filter-source" class="form-input" placeholder="Origin port...">
+                </div>
+                <div class="form-group">
+                    <label for="filter-dest">To Port</label>
+                    <input type="text" id="filter-dest" class="form-input" placeholder="Destination...">
+                </div>
+                <div class="form-group">
+                    <label for="filter-date">Departure Date</label>
+                    <input type="date" id="filter-date" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="filter-type">Vessel Type</label>
+                    <select id="filter-type" class="form-input">
+                        <option value="">All Types</option>
+                        <option value="Cruise Ship">Cruise Ship</option>
+                        <option value="Ferry">Ferry</option>
+                        <option value="Luxury Yacht">Luxury Yacht</option>
+                        <option value="River Cruise">River Cruise</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-search" id="btn-apply-filters">Filter</button>
+            </form>
+        </div>
+
+        <!-- Grid of Ships / Schedules -->
+        <div class="card-grid" id="ships-grid">
+            <!-- Populated via script.js -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 AuraCruises. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

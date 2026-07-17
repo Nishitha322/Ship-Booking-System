@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Booking — AuraCruises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="booking">
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path d="M2 21h20M19.3 12H4.7c-.5 0-.9-.3-1-.8L2.1 6.1C2 5.5 2.4 5 3 5h18c.6 0 1 .5.9 1.1l-1.6 5.1c-.1.5-.5.8-1 .8zM12 2v3M8 3v2M16 3v2" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="logo-text">AuraCruises</span>
+            </a>
+            <nav>
+                <ul class="nav-menu" id="nav-menu"></ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="checkout-wrapper">
+            
+            <!-- Left Info Panel -->
+            <div>
+                <h1 class="section-title">Passenger Credentials</h1>
+                <p class="section-subtitle" style="margin-bottom: 2.5rem;">Review the booking passenger passport details linked to your ticket.</p>
+                
+                <form class="auth-form" id="booking-form" style="background-color: var(--white); padding: 2.5rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);">
+                    <div class="form-group">
+                        <label for="book-name">Full Name</label>
+                        <input type="text" id="book-name" class="form-input" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-email">Email Address</label>
+                        <input type="email" id="book-email" class="form-input" readonly>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                        <div class="form-group">
+                            <label for="book-phone">Phone Number</label>
+                            <input type="text" id="book-phone" class="form-input" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-passport">Passport Number</label>
+                            <input type="text" id="book-passport" class="form-input" readonly>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-submit" id="btn-confirm-booking" style="height: 3.5rem;">Confirm & Proceed to Payment</button>
+                </form>
+            </div>
+
+            <!-- Right Info Panel -->
+            <div>
+                <div class="summary-card">
+                    <h2 class="summary-title">Ticket Details</h2>
+                    
+                    <div class="summary-row">
+                        <span style="color: var(--text-slate);">Cruise Line</span>
+                        <strong id="sum-ship">-</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span style="color: var(--text-slate);">Ports Routing</span>
+                        <strong id="sum-route">-</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span style="color: var(--text-slate);">Journey Date</span>
+                        <strong id="sum-date">-</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span style="color: var(--text-slate);">Lodging Class</span>
+                        <strong id="sum-cabin">-</strong>
+                    </div>
+                    
+                    <div class="summary-row total">
+                        <span>Total Due</span>
+                        <span id="sum-total">$0</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 AuraCruises. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

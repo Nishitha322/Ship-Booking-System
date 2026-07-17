@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal — AuraCruises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin-dashboard">
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path d="M2 21h20M19.3 12H4.7c-.5 0-.9-.3-1-.8L2.1 6.1C2 5.5 2.4 5 3 5h18c.6 0 1 .5.9 1.1l-1.6 5.1c-.1.5-.5.8-1 .8zM12 2v3M8 3v2M16 3v2" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="logo-text">AuraCruises <span style="font-size:0.75rem; color:var(--accent-teal); vertical-align:middle; border:1px solid; padding:2px 6px; border-radius:4px; margin-left:5px;">Admin</span></span>
+            </a>
+            <nav>
+                <ul class="nav-menu" id="nav-menu"></ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        
+        <!-- Sidebar Controls -->
+        <aside class="dashboard-sidebar" aria-label="Admin Navigation">
+            <h2 class="sidebar-title">Admin Controls</h2>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="sidebar-link active" data-panel="ships">🚢 Fleet Management</a></li>
+                <li><a href="#" class="sidebar-link" data-panel="passengers">👥 Passenger Database</a></li>
+                <li><a href="#" class="sidebar-link" data-panel="schedules">📅 Voyage Schedules</a></li>
+                <li><a href="#" class="sidebar-link" data-panel="bookings">🎫 Cabins Bookings</a></li>
+                <li><a href="#" class="sidebar-link" data-panel="payments">💵 System Payments</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="dashboard-main">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <div class="section-title-wrapper">
+                    <h1 class="section-title" id="panel-title">Fleet Management</h1>
+                    <p class="section-subtitle" id="panel-subtitle">Add, edit, or decommission vessels in the cruise fleet.</p>
+                </div>
+                <button class="btn-add-entity" id="btn-add-entity">+ Add Ship</button>
+            </div>
+
+            <!-- Dynamic Table Wrapper -->
+            <div class="table-wrapper">
+                <table class="dashboard-table">
+                    <thead>
+                        <tr id="table-headers">
+                            <!-- Populated via script.js -->
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Populated via script.js -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        
+    </div>
+
+    <!-- Universal CRUD Modal -->
+    <div class="modal" id="entity-modal" role="dialog" aria-modal="true" aria-labelledby="modal-entity-title">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-entity-title">Add New Entity</h2>
+                <button class="btn-close-modal" aria-label="Close Modal">&times;</button>
+            </div>
+            <form id="modal-form">
+                <div id="modal-form-body">
+                    <!-- Dynamic form inputs injected by script.js -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 AuraCruises. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

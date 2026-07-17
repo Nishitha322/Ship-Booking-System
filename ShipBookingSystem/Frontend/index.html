@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraCruises — Set Sail with Confidence</title>
+    <meta name="description" content="Discover premium maritime voyages, search ships schedules, select deluxe cabins, and book cruise tickets online with AuraCruises.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+
+    <!-- Premium Glassmorphic Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-container" id="logo-link">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path d="M2 21h20M19.3 12H4.7c-.5 0-.9-.3-1-.8L2.1 6.1C2 5.5 2.4 5 3 5h18c.6 0 1 .5.9 1.1l-1.6 5.1c-.1.5-.5.8-1 .8zM12 2v3M8 3v2M16 3v2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">AuraCruises</span>
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu" id="nav-menu">
+                    <!-- Loaded dynamically via script.js -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner with Wave Overlay -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">Premium Ocean Voyages</span>
+            <h1 class="hero-title">Your Next Horizon Awaits</h1>
+            <p class="hero-desc">Experience unmatched luxury and explore exotic ports with the world's most trusted cruise lines. Smooth sailing from booking to boarding.</p>
+        </div>
+        <div class="hero-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,57.05,18.3,90.35,27.1,148.65,42.58,210.15,55.19,273.36,60.1,289.44,61.35,305.52,61.35,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Floating Search Panel -->
+    <div class="search-container">
+        <div class="search-card">
+            <form class="search-form" id="home-search-form">
+                <div class="form-group">
+                    <label for="search-source">Source Port</label>
+                    <input type="text" id="search-source" class="form-input" placeholder="e.g. Chennai Port">
+                </div>
+                <div class="form-group">
+                    <label for="search-dest">Destination Port</label>
+                    <input type="text" id="search-dest" class="form-input" placeholder="e.g. Port Blair">
+                </div>
+                <div class="form-group">
+                    <label for="search-date">Departure Date</label>
+                    <input type="date" id="search-date" class="form-input">
+                </div>
+                <button type="submit" class="btn-search" id="btn-search-submit">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    Search Journeys
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Featured Cruises -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">Featured Cruise Voyages</h2>
+                <p class="section-subtitle">Handpicked luxury liners configured with modern maritime suites.</p>
+            </div>
+            <a href="ships.html" class="nav-btn-secondary" style="color: var(--accent-teal); border-color: var(--accent-teal)">View All Journeys</a>
+        </div>
+        <div class="card-grid" id="featured-cruises">
+            <!-- Dynamically populated from API -->
+        </div>
+    </section>
+
+    <!-- Latest Offers -->
+    <section class="section" style="padding-top: 0;">
+        <div class="section-header">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">Special Travel Offers</h2>
+                <p class="section-subtitle">Unlock limited-time discounts for early cabin registrations.</p>
+            </div>
+        </div>
+        <div class="card-grid">
+            <!-- Offer 1 -->
+            <div class="card" style="flex-direction: row; align-items: center; padding: 1.5rem; gap: 1.5rem;">
+                <div style="font-size: 3rem; background: rgba(19, 163, 163, 0.1); padding: 1.5rem; border-radius: var(--radius-md)">🌴</div>
+                <div>
+                    <h3 style="margin-bottom: 0.25rem;">Summer Cruise Early Bird</h3>
+                    <p style="color: var(--text-slate); font-size: 0.9rem; margin-bottom: 0.5rem;">Book your cabin 30 days prior and save up to 25% on VIP Suites.</p>
+                    <span class="badge-status status-confirmed">Code: SUMMER26</span>
+                </div>
+            </div>
+            <!-- Offer 2 -->
+            <div class="card" style="flex-direction: row; align-items: center; padding: 1.5rem; gap: 1.5rem;">
+                <div style="font-size: 3rem; background: rgba(255, 107, 74, 0.1); padding: 1.5rem; border-radius: var(--radius-md)">🎫</div>
+                <div>
+                    <h3 style="margin-bottom: 0.25rem;">Island Escapes Package</h3>
+                    <p style="color: var(--text-slate); font-size: 0.9rem; margin-bottom: 0.5rem;">Enjoy complimentary meal vouchers and onboard spa credits.</p>
+                    <span class="badge-status status-success">All-inclusive</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <svg class="footer-logo-icon" viewBox="0 0 24 24">
+                        <path d="M2 21h20M19.3 12H4.7c-.5 0-.9-.3-1-.8L2.1 6.1C2 5.5 2.4 5 3 5h18c.6 0 1 .5.9 1.1l-1.6 5.1c-.1.5-.5.8-1 .8zM12 2v3M8 3v2M16 3v2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    <span class="footer-logo-text">AuraCruises</span>
+                </div>
+                <p class="footer-desc">Crafting premium travel experiences and oceanic itineraries since 2012. Safe journeys guaranteed.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-menu">
+                    <li><a href="ships.html" class="footer-menu-link">Cruise Fleet</a></li>
+                    <li><a href="booking_history.html" class="footer-menu-link">Booking History</a></li>
+                    <li><a href="passenger_dashboard.html" class="footer-menu-link">Passenger Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul class="footer-menu">
+                    <li><a href="#" class="footer-menu-link">Maritime Guidelines</a></li>
+                    <li><a href="#" class="footer-menu-link">Refund Policies</a></li>
+                    <li><a href="#" class="footer-menu-link">Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AuraCruises. All rights reserved.</p>
+            <p>Designed for Modern Maritime Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
