@@ -120,3 +120,11 @@ The system exposes 20 function-based views (FBVs) to handle REST operations, plu
 The default engine is configured in `settings.py` to use `db.sqlite3`.
 *   To migrate database engines to **MySQL** or **PostgreSQL**, adjust the `'default'` block in `Backend/settings.py` under `DATABASES` to configure your connection strings.
 *   To query the local database via terminal, use `sqlite3 db.sqlite3` inside `Backend/`.
+
+
+<img width="1548" height="938" alt="WhatsApp Image 2026-07-17 at 4 10 10 PM (1)" src="https://github.com/user-attachments/assets/1ee78f81-7d5c-492e-8a03-ba3867c73a81" />
+<img width="1570" height="943" alt="WhatsApp Image 2026-07-17 at 4 10 10 PM (2)" src="https://github.com/user-attachments/assets/cd587c78-ad47-4359-9a22-e7562764e925" />
+<img width="1555" height="936" alt="WhatsApp Image 2026-07-17 at 4 10 10 PM" src="https://github.com/user-attachments/assets/51a6563c-3fa3-466c-b9cb-ca32c19962c9" />
+
+
+
